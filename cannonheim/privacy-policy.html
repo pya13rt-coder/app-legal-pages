@@ -24,6 +24,8 @@
       margin: 0 0 8px;
     }
     h2 { margin-top: 32px; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid rgba(128, 128, 128, .35); }
     .date {
       color: #5d6472;
       margin-bottom: 32px;
@@ -37,52 +39,138 @@
 <body>
   <main>
     <h1>Datenschutzerklärung für CANNONHEIM</h1>
-    <p class="date">Stand: 6. Oktober 2026</p>
+    <p class="date">Stand: 12. Oktober 2026 (gilt ab Version 0.5.1)</p>
 
-    <p>CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>) ist ein Offline-Strategiespiel: Zwei Burgen beschießen sich
-      abwechselnd, gegen den Computer oder zu zweit an einem Gerät.</p>
+    <p>CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>) ist ein Strategiespiel: Zwei Burgen beschießen sich
+      abwechselnd – gegen den Computer, zu zweit an einem Gerät, im lokalen Netzwerk (LAN) oder online gegen andere
+      Spieler. Diese Erklärung beschreibt, welche Daten dabei verarbeitet werden.</p>
 
-    <h2>1. Keine Datenerhebung</h2>
-    <p>CANNONHEIM erhebt, übermittelt, verkauft oder teilt keine personenbezogenen Daten.</p>
-    <p>Das Spiel benötigt kein Benutzerkonto und verwendet keine Werbung, keine Analyse-Dienste, kein Tracking, keine
-      Cloud-Speicherung und kein Crash-Reporting durch Drittanbieter. Die App hat keinen Internetzugriff und nimmt keine
-      Verbindung zu Servern auf.</p>
+    <h2>1. Kurzfassung</h2>
+    <ul>
+      <li>Ohne Online-Mehrspieler verlassen keine Daten dein Gerät.</li>
+      <li>Nur wenn du den <strong>Online-Mehrspieler</strong> nutzt, speichern wir einen von dir gewählten
+        <strong>Spielernamen</strong>, eine <strong>zufällig erzeugte Spieler-ID</strong> und die
+        <strong>Ergebnisse deiner Online-Partien</strong>. Wir erheben keine E-Mail-Adresse, keinen echten Namen, keinen
+        Standort, keine Kontakte und keine Geräte- oder Werbe-IDs.</li>
+      <li>Alle Verbindungen zum Online-Dienst sind verschlüsselt (TLS).</li>
+      <li>Keine Werbung, kein Tracking, keine Analyse-Dienste, kein Crash-Reporting, kein Verkauf und keine Weitergabe
+        von Daten.</li>
+      <li>Du kannst dein Online-Profil jederzeit löschen lassen (<a href="#loeschen">Abschnitt 8</a>).</li>
+    </ul>
 
-    <h2>2. Lokale Speicherung</h2>
-    <p>Damit das Spiel funktioniert, speichert CANNONHEIM ausschließlich lokal im privaten App-Speicher auf deinem Gerät:</p>
+    <h2>2. Verantwortlicher und Kontakt</h2>
+    <p>Verantwortlich ist der im Google-Play-Eintrag von CANNONHEIM genannte Entwickler. Für alle Fragen zum Datenschutz
+      und für Löschanfragen erreichst du ihn über die dort angegebene Support-E-Mail-Adresse.</p>
+
+    <h2>3. Lokale Speicherung auf deinem Gerät</h2>
+    <p>Im privaten App-Speicher (für andere Apps nicht zugänglich) speichert CANNONHEIM:</p>
     <ul>
       <li>den Spielstand der laufenden Partie, damit du sie später fortsetzen kannst,</li>
       <li>deine Einstellungen, zum Beispiel Schwierigkeit, Ton, Kamerawackeln und bereits gesehene Hinweise,</li>
       <li>kurze Spielprotokolle der letzten Partien und der Grundausbildung (zum Beispiel Karte, Runden, Schüsse, Treffer,
-        Spielversion). Diese enthalten nur Spieldaten und keine Angaben zu deiner Person oder deinem Gerät.</li>
+        Spielversion),</li>
+      <li>falls du den Online-Mehrspieler nutzt: deinen Spielernamen, deine Spieler-ID und einen geheimen
+        Zugangsschlüssel (Token), mit dem sich die App beim Online-Dienst anmeldet.</li>
     </ul>
-    <p>Diese Daten verlassen dein Gerät nicht. Sie werden gelöscht, wenn du die App deinstallierst oder in den
-      Android-Einstellungen die App-Daten löschst.</p>
+    <p>Außer den in Abschnitt 4 genannten Online-Daten wird davon nichts übertragen. Die Daten werden gelöscht, wenn du
+      die App deinstallierst oder in den Android-Einstellungen die App-Daten löschst.</p>
 
-    <h2>3. Matchbericht teilen</h2>
+    <h2>4. Online-Mehrspieler (freiwillig)</h2>
+    <p>Der Online-Mehrspieler ist optional. Beim ersten Öffnen wählst du einen Spielernamen (3–20 Zeichen). Bitte
+      verwende dafür nicht deinen echten Namen. Der Online-Dienst legt daraufhin ein Online-Profil an.</p>
+    <table>
+      <tr><th>Daten</th><th>Zweck</th></tr>
+      <tr><td>Spielername</td><td>Anzeige in der Spielerliste und für deinen Gegner</td></tr>
+      <tr><td>Spieler-ID (Zufallswert, ohne Bezug zu deinem Gerät oder deiner Person)</td><td>Zuordnung deines Profils,
+        Wiederverbinden nach einem Verbindungsabbruch</td></tr>
+      <tr><td>Prüfwert (Hash) deines Zugangsschlüssels – der Schlüssel selbst bleibt auf deinem Gerät</td><td>Anmeldung
+        ohne Passwort</td></tr>
+      <tr><td>Spielversion, Zeitpunkt der Erstellung und der letzten Anmeldung</td><td>Kompatibilität, Betrieb</td></tr>
+      <tr><td>Partiedaten: beteiligte Spieler-IDs, Beginn und Ende, Sieger, Dauer, Grund des Partieendes (zum Beispiel
+        Sieg, Aufgabe, Verbindungsabbruch), ein Prüfwert des Endstands</td><td>Durchführung der Partie, Erkennen von
+        Fehlern und Manipulation</td></tr>
+    </table>
+    <p>Während einer Partie leitet der Dienst die Spielzüge zwischen den beiden Geräten weiter. Diese werden nicht
+      gespeichert.</p>
+    <p><strong>Sichtbarkeit:</strong> Andere Online-Spieler sehen deinen Spielernamen und ein vierstelliges Kürzel deiner
+      Spieler-ID, solange du online bist; dein Gegner sieht deinen Spielernamen während der Partie.</p>
+    <p><strong>Rechtsgrundlage:</strong> Bereitstellung der von dir gewünschten Online-Funktion (Art. 6 Abs. 1 lit. b
+      DSGVO) und unser berechtigtes Interesse an einem sicheren, missbrauchsfreien Betrieb (Art. 6 Abs. 1 lit. f
+      DSGVO).</p>
+    <p><strong>Server und Verschlüsselung:</strong> Der Online-Dienst läuft auf einem Server in Österreich (Hoster:
+      netcup GmbH, Karlsruhe, als Auftragsverarbeiter). Alle Verbindungen sind mit TLS verschlüsselt; die App akzeptiert
+      nur das Zertifikat des CANNONHEIM-Dienstes. Es findet keine Übermittlung in Länder außerhalb der EU statt.</p>
+
+    <h2>5. Technische Verbindungsdaten</h2>
+    <p>Für den Verbindungsaufbau verarbeitet der Server zwangsläufig deine IP-Adresse. Sie wird nur im Arbeitsspeicher
+      genutzt, um Überlastung und Missbrauch zu begrenzen (zum Beispiel höchstens eine bestimmte Zahl von Verbindungen je
+      Adresse), und weder in der Datenbank noch in Protokollen gespeichert.</p>
+    <p>Die Betriebsprotokolle des Servers enthalten Zeitpunkte, Ereignisse (zum Beispiel Anmeldung, Verbindungsende,
+      Partieende) und gekürzte Spieler- und Partie-IDs, aber keine Spielernamen und keine IP-Adressen. Sie dienen der
+      Fehlersuche und werden automatisch überschrieben, sobald eine feste Speichergrenze erreicht ist.</p>
+
+    <h2>6. LAN-Mehrspieler</h2>
+    <p>Im LAN-Mehrspieler verbinden sich zwei Geräte direkt im selben lokalen Netzwerk; unser Server ist nicht beteiligt.
+      Übertragen werden nur Spieldaten (Spielzüge, Spielstand, Spielversion). Die Spieler heißen dabei fest
+      „Spieler 1“ und „Spieler 2“; es werden keine personenbezogenen Daten übertragen. Diese Verbindung ist nicht
+      verschlüsselt und verlässt dein lokales Netzwerk nicht.</p>
+
+    <h2>7. Speicherdauer</h2>
+    <ul>
+      <li>Online-Profil und Partiedaten: bis du die Löschung verlangst (<a href="#loeschen">Abschnitt 8</a>) oder der
+        Online-Dienst eingestellt wird.</li>
+      <li>IP-Adressen: nur für die Dauer der Verbindung im Arbeitsspeicher.</li>
+      <li>Betriebsprotokolle: bis zum automatischen Überschreiben (Abschnitt 5).</li>
+      <li>Daten auf deinem Gerät: bis zur Deinstallation oder bis du die App-Daten löschst.</li>
+    </ul>
+
+    <h2 id="loeschen">8. Online-Profil löschen</h2>
+    <p>Du kannst die Löschung deines Online-Profils und der zugehörigen Daten jederzeit verlangen, auch ohne die App
+      installiert zu haben:</p>
+    <ol>
+      <li>Schreibe eine E-Mail an die Support-E-Mail-Adresse aus dem Google-Play-Eintrag von CANNONHEIM, Betreff
+        „CANNONHEIM Profil löschen“.</li>
+      <li>Gib deinen Spielernamen und das vierstellige Kürzel an, das in der Online-Lobby neben deinem Namen steht.</li>
+    </ol>
+    <p>Wir löschen dein Profil (Name, Spieler-ID, Prüfwert des Zugangsschlüssels, Zeitstempel) innerhalb von 30 Tagen
+      und bestätigen dir die Löschung. Deine Online-Partien werden dabei anonymisiert: Die Verknüpfung mit deiner
+      Spieler-ID wird entfernt, übrig bleiben nur anonyme Spieldaten (Dauer, Ergebnisgrund). Gekürzte IDs in den
+      Betriebsprotokollen verschwinden mit dem automatischen Überschreiben.</p>
+    <p>Die Daten auf deinem Gerät löschst du selbst über die Android-Einstellungen (App → Speicher → Daten löschen) oder
+      durch Deinstallieren. Ohne den gespeicherten Zugangsschlüssel ist das alte Online-Profil auch für dich nicht mehr
+      nutzbar; die Löschung auf dem Server kannst du trotzdem wie oben verlangen.</p>
+
+    <h2>9. Berechtigungen</h2>
+    <p>CANNONHEIM fordert nur die Berechtigung <strong>Internetzugriff</strong> an. Sie wird ausschließlich für den
+      Online- und den LAN-Mehrspieler verwendet. Die App fordert keine Berechtigungen für Standort, Kontakte, Kamera,
+      Mikrofon, Speicher, SMS oder Telefon an.</p>
+
+    <h2>10. Keine Werbung, kein Tracking, keine Weitergabe</h2>
+    <p>CANNONHEIM enthält keine Werbung, keine Analyse- oder Tracking-Dienste, kein Crash-Reporting und keine SDKs von
+      Drittanbietern. Wir verkaufen keine Daten und geben sie nicht an Dritte weiter. Die aktuelle Version enthält keine
+      In-App-Käufe.</p>
+
+    <h2>11. Matchbericht teilen</h2>
     <p>Nach einer Partie kannst du über „Bericht teilen“ eine Zusammenfassung des Spiels als Text in die Zwischenablage
-      kopieren. Der Bericht enthält nur Spieldaten (zum Beispiel Karte, Runden, Schüsse, Spielversion). Er wird nur dann
-      weitergegeben, wenn du ihn selbst in eine andere App einfügst und dort versendest. CANNONHEIM sendet ihn nicht.</p>
+      kopieren. Der Bericht enthält nur Spieldaten. CANNONHEIM sendet ihn nicht; er wird nur weitergegeben, wenn du ihn
+      selbst in eine andere App einfügst.</p>
 
-    <h2>4. Berechtigungen</h2>
-    <p>CANNONHEIM fordert keine Android-Berechtigungen an, insbesondere keine für Internet, Standort, Kontakte, Kamera,
-      Mikrofon, Speicher, SMS oder Telefon.</p>
+    <h2>12. Kinder</h2>
+    <p>CANNONHEIM erhebt außer dem frei gewählten Spielernamen keine Angaben zur Person. Kinder sollten im
+      Online-Mehrspieler keinen echten Namen als Spielernamen verwenden.</p>
 
-    <h2>5. Zahlungen und Werbung</h2>
-    <p>Die aktuelle Version von CANNONHEIM enthält keine In-App-Käufe und keine Werbung. Falls zukünftig kostenpflichtige
-      Funktionen angeboten werden, kann Google Play Zahlungsinformationen im Rahmen des Kaufvorgangs verarbeiten.
-      CANNONHEIM erhält dabei keine Zahlungs- oder Kreditkartendaten. Diese Datenschutzerklärung wird dann vorher angepasst.</p>
+    <h2>13. Deine Rechte</h2>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und
+      Widerspruch (Art. 15–21 DSGVO). Wende dich dafür an die Support-E-Mail-Adresse. Außerdem kannst du dich bei einer
+      Datenschutz-Aufsichtsbehörde beschweren, in Österreich bei der Datenschutzbehörde (www.dsb.gv.at).</p>
 
-    <h2>6. Kinder</h2>
-    <p>Da CANNONHEIM keine personenbezogenen Daten erhebt, werden auch von Kindern keine solchen Daten erhoben.</p>
+    <h2>14. Google Play</h2>
+    <p>Beim Herunterladen über Google Play verarbeitet Google Daten nach seiner eigenen Datenschutzerklärung. Darauf haben
+      wir keinen Einfluss.</p>
 
-    <h2>7. Änderungen</h2>
-    <p>Diese Datenschutzerklärung kann angepasst werden, wenn sich CANNONHEIM oder rechtliche Anforderungen ändern. Die
-      jeweils aktuelle Version wird über den Google-Play-Eintrag oder die dort verlinkte Datenschutzseite bereitgestellt.</p>
-
-    <h2>8. Kontakt</h2>
-    <p>Bei Fragen zum Datenschutz kannst du den Entwickler über die im Google-Play-Eintrag angegebene
-      Support-E-Mail-Adresse kontaktieren.</p>
+    <h2>15. Änderungen</h2>
+    <p>Wir passen diese Erklärung an, wenn sich CANNONHEIM oder rechtliche Anforderungen ändern. Die aktuelle Version
+      steht immer auf dieser Seite.</p>
   </main>
 </body>
 </html>
