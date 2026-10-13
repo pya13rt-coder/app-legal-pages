@@ -39,7 +39,7 @@
 <body>
   <main>
     <h1>Datenschutzerklärung für CANNONHEIM</h1>
-    <p class="date">Stand: 12. Oktober 2026 (gilt ab Version 0.5.1)</p>
+    <p class="date">Stand: 13. Oktober 2026 (Online-Dienst ab Version 0.8.0 des Servers)</p>
 
     <p>CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>) ist ein Strategiespiel: Zwei Burgen beschießen sich
       abwechselnd – gegen den Computer, zu zweit an einem Gerät, im lokalen Netzwerk (LAN) oder online gegen andere
@@ -87,9 +87,13 @@
         ohne Passwort</td></tr>
       <tr><td>Spielversion, Zeitpunkt der Erstellung und der letzten Anmeldung</td><td>Kompatibilität, Betrieb</td></tr>
       <tr><td>Partiedaten: beteiligte Spieler-IDs, Beginn und Ende, Sieger, Dauer, Grund des Partieendes (zum Beispiel
-        Sieg, Aufgabe, Verbindungsabbruch), ein Prüfwert des Endstands</td><td>Durchführung der Partie, Erkennen von
-        Fehlern und Manipulation</td></tr>
+        Sieg, Aufgabe, Verbindungsabbruch), ein Prüfwert des Endstands und die Trefferzahl beider Seiten</td>
+        <td>Durchführung der Partie, Bestätigung des Ergebnisses, Erkennen von Fehlern und Manipulation</td></tr>
+      <tr><td>Spielstatistik: Zahl deiner Online-Partien, Siege und Niederlagen (nur Summen)</td><td>Anzeige in deinem
+        Profil</td></tr>
     </table>
+    <p>Weitere Online-Funktionen (zum Beispiel Ranglisten, Freunde, Belohnungen) sind technisch vorbereitet, aber
+      derzeit nicht aktiv. Bevor wir sie einschalten, ergänzen wir diese Erklärung.</p>
     <p>Während einer Partie leitet der Dienst die Spielzüge zwischen den beiden Geräten weiter. Diese werden nicht
       gespeichert.</p>
     <p><strong>Sichtbarkeit:</strong> Andere Online-Spieler sehen deinen Spielernamen und ein vierstelliges Kürzel deiner
@@ -107,7 +111,11 @@
       Adresse), und weder in der Datenbank noch in Protokollen gespeichert.</p>
     <p>Die Betriebsprotokolle des Servers enthalten Zeitpunkte, Ereignisse (zum Beispiel Anmeldung, Verbindungsende,
       Partieende) und gekürzte Spieler- und Partie-IDs, aber keine Spielernamen und keine IP-Adressen. Sie dienen der
-      Fehlersuche und werden automatisch überschrieben, sobald eine feste Speichergrenze erreicht ist.</p>
+      Fehlersuche und werden nach 14 Tagen gelöscht. Warnungen und Fehlermeldungen landen zusätzlich im Systemprotokoll
+      des Servers, das automatisch überschrieben wird.</p>
+    <p>Für den Betrieb zählen wir außerdem nur zusammengefasste Kennzahlen je Minute (zum Beispiel Zahl der gleichzeitig
+      verbundenen Spieler, laufende Partien, Fehlerzahlen) - ohne Spieler-IDs, Namen oder IP-Adressen. Sie werden nach
+      30 Tagen gelöscht.</p>
 
     <h2>6. LAN-Mehrspieler</h2>
     <p>Im LAN-Mehrspieler verbinden sich zwei Geräte direkt im selben lokalen Netzwerk; unser Server ist nicht beteiligt.
@@ -117,10 +125,11 @@
 
     <h2>7. Speicherdauer</h2>
     <ul>
-      <li>Online-Profil und Partiedaten: bis du die Löschung verlangst (<a href="#loeschen">Abschnitt 8</a>) oder der
+      <li>Online-Profil und Spielstatistik: bis du die Löschung verlangst (<a href="#loeschen">Abschnitt 8</a>) oder der
         Online-Dienst eingestellt wird.</li>
+      <li>Partiedaten: 89 Tage nach Ende der Partie, dann automatisch gelöscht (nur die Summen der Spielstatistik bleiben).</li>
       <li>IP-Adressen: nur für die Dauer der Verbindung im Arbeitsspeicher.</li>
-      <li>Betriebsprotokolle: bis zum automatischen Überschreiben (Abschnitt 5).</li>
+      <li>Betriebsprotokolle: 14 Tage; zusammengefasste Kennzahlen: 30 Tage (Abschnitt 5).</li>
       <li>Daten auf deinem Gerät: bis zur Deinstallation oder bis du die App-Daten löschst.</li>
     </ul>
 
@@ -132,10 +141,10 @@
         „CANNONHEIM Profil löschen“.</li>
       <li>Gib deinen Spielernamen und das vierstellige Kürzel an, das in der Online-Lobby neben deinem Namen steht.</li>
     </ol>
-    <p>Wir löschen dein Profil (Name, Spieler-ID, Prüfwert des Zugangsschlüssels, Zeitstempel) innerhalb von 30 Tagen
+    <p>Wir löschen dein Profil (Name, Spieler-ID, Prüfwert des Zugangsschlüssels, Zeitstempel, Spielstatistik) innerhalb von 30 Tagen
       und bestätigen dir die Löschung. Deine Online-Partien werden dabei anonymisiert: Die Verknüpfung mit deiner
       Spieler-ID wird entfernt, übrig bleiben nur anonyme Spieldaten (Dauer, Ergebnisgrund). Gekürzte IDs in den
-      Betriebsprotokollen verschwinden mit dem automatischen Überschreiben.</p>
+      Betriebsprotokollen verschwinden spätestens nach 14 Tagen.</p>
     <p>Die Daten auf deinem Gerät löschst du selbst über die Android-Einstellungen (App → Speicher → Daten löschen) oder
       durch Deinstallieren. Ohne den gespeicherten Zugangsschlüssel ist das alte Online-Profil auch für dich nicht mehr
       nutzbar; die Löschung auf dem Server kannst du trotzdem wie oben verlangen.</p>
