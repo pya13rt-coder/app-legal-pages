@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CANNONHEIM – Online-Profil löschen</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #191d27;
+      background: #fffbf2;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    h1, h2 { line-height: 1.2; }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 8px;
+    }
+    h2 { margin-top: 32px; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid rgba(128, 128, 128, .35); }
+    a {
+      color: #9b6500;
+      font-weight: 700;
+    }
+    .date {
+      color: #5d6472;
+      margin-bottom: 32px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #fff8e7; background: #211f1a; }
+      a { color: #ffc83d; }
+      .date { color: #d8cdb8; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>CANNONHEIM – Online-Profil löschen</h1>
+    <p class="date">Stand: 16. Oktober 2026 (App-Version 1.0.0)</p>
+
+    <p>Diese Seite beschreibt, wie du dein Online-Profil von CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>)
+      und die zugehörigen Daten löschen lässt – in der App oder ohne App per E-Mail. CANNONHEIM hat keine Benutzerkonten
+      mit E-Mail oder Passwort: Das Online-Profil ist ein Gastprofil, das an deine Installation gebunden ist.</p>
+
+    <h2>1. In der App löschen (empfohlen)</h2>
+    <ol>
+      <li>Öffne CANNONHEIM und tippe auf der Startseite unten auf <strong>„Profil“</strong>. Die App verbindet sich
+        dafür mit dem Online-Dienst; du brauchst eine Internetverbindung.</li>
+      <li>Scrolle zu <strong>„Daten und Löschung“</strong>.</li>
+      <li>Tippe auf <strong>„Profil löschen“</strong> und bestätige, indem du deinen Spielernamen eintippst.</li>
+    </ol>
+    <p>Die Löschung erfolgt sofort. Die Bestätigung über den Namen verhindert ein versehentliches Löschen; nur die App,
+      die den geheimen Zugangsschlüssel deines Profils besitzt, kann diese Löschung auslösen.</p>
+
+    <h2>2. Ohne App per E-Mail löschen lassen</h2>
+    <p>Wenn du die App nicht mehr nutzen möchtest oder kannst, löschen wir dein Profil auf Antrag. Damit niemand das Profil
+      eines anderen löschen lassen kann, prüfen wir, ob der Antrag wirklich vom Inhaber kommt:</p>
+
+    <h3>a) Mit Löschcode (sicherer Weg)</h3>
+    <ol>
+      <li>Tippe in der App unter <strong>Profil → „Daten und Löschung“</strong> auf <strong>„Löschcode für
+        E-Mail“</strong>. Die App zeigt einen Code im Format <code>XXXX-XXXX</code>.</li>
+      <li>Schreibe eine E-Mail an <a href="mailto:py.a13rt@gmail.com?subject=CANNONHEIM%20Profil%20l%C3%B6schen">py.a13rt@gmail.com</a> mit dem Betreff
+        <strong>„CANNONHEIM Profil löschen“</strong> und dem Löschcode.</li>
+    </ol>
+    <p>Der Code ist zufällig, 30 Tage gültig und gehört genau zu deinem Profil; ein neuer Code ersetzt den alten. Auf dem
+      Server liegt nur ein Prüfwert (Hash) des Codes. Weitere Angaben zu deiner Person brauchen wir nicht.</p>
+
+    <h3>b) Ohne Löschcode (App nicht mehr installiert)</h3>
+    <p>Ist die App bereits deinstalliert, ist auch der Zugangsschlüssel deines Profils verloren – das Profil kann dann von
+      niemandem mehr genutzt werden. Du kannst die Löschung trotzdem verlangen:</p>
+    <ol>
+      <li>Schreibe an <a href="mailto:py.a13rt@gmail.com?subject=CANNONHEIM%20Profil%20l%C3%B6schen">py.a13rt@gmail.com</a>, Betreff <strong>„CANNONHEIM Profil
+        löschen“</strong>, und nenne deinen Spielercode (<code>Name#ABCD</code>), soweit bekannt, sowie ungefähr den
+        Zeitraum, in dem du online gespielt hast.</li>
+      <li>Hast du CANNONHEIM Full gekauft, hilft die Google-Play-Bestellnummer (<code>GPA.…</code>) aus der
+        Kaufbestätigung von Google, das Profil eindeutig zuzuordnen.</li>
+    </ol>
+    <p>Spielername und Kürzel sind für andere Spieler sichtbar und reichen allein nicht als Nachweis. Wir löschen ein so
+      beantragtes Profil daher nur, wenn wir es eindeutig zuordnen können. Gelingt das nicht, melden wir uns bei dir.</p>
+
+    <p>Wir bearbeiten Anträge innerhalb von 30 Tagen und bestätigen dir die Löschung per E-Mail. Deine E-Mail-Adresse
+      und den Schriftverkehr verwenden wir nur für die Bearbeitung des Antrags. Das Postfach wird bei Gmail (Google)
+      geführt; Näheres in der <a href="privacy-policy.html#support">Datenschutzerklärung</a>.</p>
+
+    <h2>3. Was gelöscht wird</h2>
+    <table>
+      <tr><th>Daten</th><th>Was passiert</th></tr>
+      <tr><td>Spielername, Spieler-ID, Prüfwert des Zugangsschlüssels, Zeitstempel</td><td>gelöscht</td></tr>
+      <tr><td>Spielstatistik, Wertungen, Freundesliste, Blockierungen und Meldungen</td><td>gelöscht</td></tr>
+      <tr><td>Geschenkte Vollversion (Admin-Geschenk) und Zähler des Online-Kontingents</td><td>gelöscht</td></tr>
+      <tr><td>Löschcodes und eine eventuelle Kontoverknüpfung</td><td>gelöscht</td></tr>
+      <tr><td>Online-Partien</td><td>anonymisiert: Die Verknüpfung mit deiner Spieler-ID wird entfernt; übrig bleiben
+        nur anonyme Spieldaten. Partiedaten werden ohnehin nach 89 Tagen gelöscht.</td></tr>
+      <tr><td>Google-Play-Käufe (Bestellnummer, Prüfwert des Kauf-Tokens, Status, Kaufverlauf)</td><td>anonymisiert
+        aufbewahrt, ohne Bezug zu deinem Profil – damit „Kauf wiederherstellen“ und Rückerstattungen weiter
+        funktionieren. Eine automatische Löschung ist derzeit nicht eingerichtet.</td></tr>
+      <tr><td>Gekürzte IDs in Betriebsprotokollen</td><td>spätestens nach 14 Tagen gelöscht</td></tr>
+      <tr><td>Einträge im Audit-Protokoll (Verwaltungs- und Kaufereignisse, zum Beispiel ein Geschenk oder eine
+        Rückerstattung)</td><td>bleiben erhalten, mit der Spieler-ID, aber ohne Profil und Namen; derzeit keine
+        automatische Löschung</td></tr>
+    </table>
+
+    <h2>4. Was die Löschung für deine Käufe bedeutet</h2>
+    <ul>
+      <li><strong>Gekaufte Vollversion:</strong> Der Kauf gehört zu deinem Google-Konto, nicht zum Online-Profil. Nach der
+        Löschung kannst du ihn in einem neuen Profil über <strong>„Kauf wiederherstellen“</strong> zurückholen.</li>
+      <li><strong>Geschenkte Vollversion:</strong> Ein Geschenk hängt am Profil und geht mit der Löschung verloren.</li>
+    </ul>
+
+    <h2>5. Daten auf deinem Gerät</h2>
+    <p>Spielstand, Einstellungen und der lokale Zugangsschlüssel liegen nur auf deinem Gerät. Du löschst sie über die
+      Android-Einstellungen (App → Speicher → Daten löschen) oder durch Deinstallieren der App.</p>
+
+    <h2>6. Kontakt</h2>
+    <p>Support und Löschanträge: <a href="mailto:py.a13rt@gmail.com?subject=CANNONHEIM%20Profil%20l%C3%B6schen">py.a13rt@gmail.com</a></p>
+
+    <p>Verantwortlich: Dominik Lürzer, Österreich (<a href="impressum.html">Impressum</a>)</p>
+
+    <p>Weitere Informationen: <a href="privacy-policy.html">Datenschutzerklärung für CANNONHEIM</a>, insbesondere
+      <a href="privacy-policy.html#loeschen">Abschnitt 10 „Online-Profil löschen“</a></p>
+  </main>
+</body>
+</html>
