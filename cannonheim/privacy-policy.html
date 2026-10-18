@@ -39,7 +39,8 @@
 <body>
   <main>
     <h1>Datenschutzerklärung für CANNONHEIM</h1>
-    <p class="date">Stand: 16. Oktober 2026 (App-Version 1.0.0)</p>
+    <!-- ENTWURF Aufbewahrungsfristen 1.0.x: Datum beim Veröffentlichen eintragen (gleichzeitig mit dem Server-Update). -->
+    <p class="date">Stand: [DATUM] (App-Version 1.0.0, Online-Dienst 1.0.1)</p>
 
     <p>CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>) ist ein Strategiespiel: Zwei Burgen beschießen sich
       abwechselnd – gegen den Computer, zu zweit an einem Gerät, im lokalen Netzwerk (LAN) oder online gegen andere
@@ -104,6 +105,8 @@
       <tr><td>Prüfwert (Hash) deines Zugangsschlüssels – der Schlüssel selbst bleibt auf deinem Gerät</td><td>Anmeldung
         ohne Passwort</td></tr>
       <tr><td>Spielversion, Zeitpunkt der Erstellung und der letzten Anmeldung</td><td>Kompatibilität, Betrieb</td></tr>
+      <tr><td>Online-Sitzungen: Beginn und Ende deiner Verbindungen mit dem Online-Dienst und die Spielversion (ohne
+        IP-Adresse)</td><td>Betrieb und Fehlersuche, Erkennen von Missbrauch, Bearbeitung von Meldungen</td></tr>
       <tr><td>Partiedaten: beteiligte Spieler-IDs, Beginn und Ende, Sieger, Dauer, Grund des Partieendes (zum Beispiel
         Sieg, Aufgabe, Verbindungsabbruch), ein Prüfwert des Endstands und die Trefferzahl beider Seiten</td>
         <td>Durchführung der Partie, Bestätigung des Ergebnisses, Erkennen von Fehlern und Manipulation</td></tr>
@@ -116,6 +119,22 @@
       Erklärung.</p>
     <p>Während einer Partie leitet der Dienst die Spielzüge zwischen den beiden Geräten weiter. Diese werden nicht
       gespeichert.</p>
+    <p id="meldungen"><strong>Spieler melden:</strong> Du kannst einen anderen Spieler melden, zum Beispiel wegen
+      Schummelns, eines anstößigen Namens oder unsportlichen Verhaltens. Gespeichert werden die Spieler-IDs des Meldenden
+      und des Gemeldeten, der Grund, der Zeitpunkt, gegebenenfalls die betroffene Partie sowie der Bearbeitungsstand und
+      eine kurze Notiz des Administrators. Meldungen sperren niemanden automatisch; sie werden vom Administrator geprüft.
+      Der Gemeldete erfährt nicht, wer ihn gemeldet hat.</p>
+    <p><strong>Beweissicherung bei gemeldeten Partien:</strong> Meldet ein Teilnehmer eine Partie, sichern wir für die
+      Prüfung eine Kopie der dazu nötigen Spieldaten: beteiligte Spieler-IDs und Spielernamen, Beginn und Ende, Ergebnis
+      und Grund des Partieendes, die Ergebnisberichte beider Geräte (gemeldeter Sieger, Prüfwert des Endstands,
+      Trefferzahl) sowie gegebenenfalls Rangpunkte und Belohnungen dieser Partie. Spielzüge, IP-Adressen, Geräte- und
+      Kaufdaten gehören nicht dazu. Die Kopie wird <strong>höchstens 30 Tage ab Eingang der Meldung</strong>
+      aufbewahrt und danach automatisch gelöscht, früher, sobald die Prüfung abgeschlossen ist. Länger nur, wenn es
+      im Einzelfall für die Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist (zum
+      Beispiel bei einem angekündigten Rechtsstreit um eine Sperre); das wird dann gesondert begründet und dokumentiert.
+      Zugriff hat nur der Administrator; jede Einsicht wird protokolliert. Rechtsgrundlage: unser berechtigtes Interesse
+      an einem fairen, missbrauchsfreien Online-Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Wird eine Partie erst gemeldet,
+      nachdem ihre Daten bereits gelöscht wurden (nach 24 Stunden), bleibt nur die Meldung selbst.</p>
     <p><strong>Sichtbarkeit:</strong> Andere Online-Spieler sehen deinen Spielernamen und ein vierstelliges Kürzel deiner
       Spieler-ID, solange du online bist; dein Gegner sieht deinen Spielernamen während der Partie.</p>
     <p><strong>Rechtsgrundlage:</strong> Bereitstellung der von dir gewünschten Online-Funktion (Art. 6 Abs. 1 lit. b
@@ -198,13 +217,23 @@
     <ul>
       <li>Online-Profil, Spielstatistik, Freischaltungen und Geschenke: bis du die Löschung verlangst
         (<a href="#loeschen">Abschnitt 10</a>) oder der Online-Dienst eingestellt wird.</li>
-      <li>Partiedaten: 89 Tage nach Ende der Partie, dann automatisch gelöscht (nur die Summen der Spielstatistik bleiben).</li>
+      <li>Partiedaten: 24 Stunden nach Ende der Partie, dann automatisch gelöscht (nur die Summen der Spielstatistik
+        bleiben). Eine Partie, deren Ergebnis noch nicht feststeht, bleibt bis zur Auswertung gespeichert, höchstens
+        48 Stunden; danach wird sie ohne Wertung abgeschlossen und nach weiteren 24 Stunden gelöscht.</li>
+      <li>Rangpunkte- und Belohnungsbuchungen je Partie (sobald Ranglisten bzw. Events aktiv sind): 30 Tage, damit
+        Änderungen nachvollziehbar bleiben.</li>
+      <li>Online-Sitzungen (Beginn und Ende deiner Verbindungen): 30 Tage.</li>
+      <li>Meldungen: bis zur Bearbeitung; bearbeitete Meldungen 90 Tage.</li>
+      <li>Beweiskopie einer gemeldeten Partie: höchstens 30 Tage ab Eingang der Meldung, früher nach Abschluss der
+        Prüfung; länger nur bei gesondert dokumentierter rechtlicher Notwendigkeit (<a href="#meldungen">Abschnitt 4</a>).</li>
       <li>Kaufdaten (Abschnitt 5): Sie werden derzeit nicht automatisch gelöscht. Nach einer Profillöschung bleiben sie
         ohne Bezug zum Profil erhalten, damit „Kauf wiederherstellen“ und Rückerstattungen funktionieren.</li>
       <li>Audit-Protokoll (Abschnitt 7): wird derzeit nicht automatisch gelöscht.</li>
       <li>Zähler des Online-Kontingents (sobald aktiv): 100 Tage.</li>
       <li>IP-Adressen: nur für die Dauer der Verbindung im Arbeitsspeicher.</li>
       <li>Betriebsprotokolle: 14 Tage; zusammengefasste Kennzahlen: 30 Tage (Abschnitt 7).</li>
+      <li>Sicherungskopien des Servers (Schutz vor Datenverlust, gespeichert in Österreich): bis zu 14 Tage. Gelöschte
+        Daten verschwinden spätestens dann auch aus den Sicherungskopien.</li>
       <li>E-Mails an den Support (Abschnitt 18): Sie liegen im E-Mail-Postfach; eine automatische Löschfrist ist derzeit
         nicht eingerichtet.</li>
       <li>Daten auf deinem Gerät: bis zur Deinstallation oder bis du die App-Daten löschst.</li>
@@ -226,7 +255,14 @@
       nur anonyme Spieldaten (Dauer, Ergebnisgrund). Kaufdaten bleiben ohne Bezug zu deinem Profil erhalten; einen
       Kauf holst du in einem neuen Profil über „Kauf wiederherstellen“ zurück. Eine geschenkte Vollversion geht mit der
       Löschung verloren. Gekürzte IDs in den Betriebsprotokollen verschwinden spätestens nach 14 Tagen. Einträge im
-      Audit-Protokoll (Abschnitt 7) bleiben mit der Spieler-ID, aber ohne Profil und Namen erhalten.</p>
+      Audit-Protokoll (Abschnitt 7) bleiben mit der Spieler-ID, aber ohne Profil und Namen erhalten. Deine
+      Online-Sitzungen und deine Meldungen werden gelöscht.</p>
+    <p><strong>Ausnahme bei gemeldeten Partien:</strong> Wurde eine Partie, an der du beteiligt warst, gemeldet, und
+      läuft dazu noch eine Beweissicherung (<a href="#meldungen">Abschnitt 4</a>), bleibt diese Kopie trotz Löschung
+      bis zu ihrem regulären Ende erhalten, also höchstens 30 Tage ab Eingang der Meldung, soweit sie für die Prüfung
+      oder für die Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist (Art. 17 Abs. 3
+      lit. e DSGVO). Deine Spieler-ID wird darin durch ein zufälliges Kennzeichen ersetzt und dein Spielername
+      entfernt; dasselbe gilt für die zugehörige Meldung. Danach wird beides automatisch gelöscht.</p>
     <p>Die Daten auf deinem Gerät löschst du selbst über die Android-Einstellungen (App → Speicher → Daten löschen) oder
       durch Deinstallieren. Ohne den gespeicherten Zugangsschlüssel ist das alte Online-Profil auch für dich nicht mehr
       nutzbar; die Löschung auf dem Server kannst du trotzdem wie oben verlangen.</p>

@@ -44,7 +44,8 @@
 <body>
   <main>
     <h1>CANNONHEIM – Online-Profil löschen</h1>
-    <p class="date">Stand: 16. Oktober 2026 (App-Version 1.0.0)</p>
+    <!-- ENTWURF Aufbewahrungsfristen 1.0.x: Datum beim Veröffentlichen eintragen (gleichzeitig mit dem Server-Update). -->
+    <p class="date">Stand: [DATUM] (App-Version 1.0.0, Online-Dienst 1.0.1)</p>
 
     <p>Diese Seite beschreibt, wie du dein Online-Profil von CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>)
       und die zugehörigen Daten löschen lässt – in der App oder ohne App per E-Mail. CANNONHEIM hat keine Benutzerkonten
@@ -95,15 +96,25 @@
     <table>
       <tr><th>Daten</th><th>Was passiert</th></tr>
       <tr><td>Spielername, Spieler-ID, Prüfwert des Zugangsschlüssels, Zeitstempel</td><td>gelöscht</td></tr>
-      <tr><td>Spielstatistik, Wertungen, Freundesliste, Blockierungen und Meldungen</td><td>gelöscht</td></tr>
+      <tr><td>Spielstatistik, Wertungen, Freundesliste, Blockierungen und Online-Sitzungen</td><td>gelöscht</td></tr>
+      <tr><td>Meldungen, die du abgegeben hast oder die gegen dich vorliegen</td><td>gelöscht – Ausnahme siehe
+        nächste Zeile</td></tr>
+      <tr><td>Beweiskopie einer gemeldeten Partie, an der du beteiligt warst (nur wenn dazu noch eine
+        Beweissicherung läuft)</td><td>bleibt bis zu ihrem regulären Ende erhalten, höchstens 30 Tage ab Eingang der
+        Meldung, soweit sie für die Prüfung oder für Rechtsansprüche erforderlich ist (Art. 17 Abs. 3 lit. e DSGVO).
+        Deine Spieler-ID wird durch ein zufälliges Kennzeichen ersetzt, dein Spielername entfernt; die zugehörige
+        Meldung ebenso. Danach automatisch gelöscht. Einzelheiten: <a href="privacy-policy.html#meldungen">Datenschutzerklärung,
+        Abschnitt 4</a>.</td></tr>
       <tr><td>Geschenkte Vollversion (Admin-Geschenk) und Zähler des Online-Kontingents</td><td>gelöscht</td></tr>
       <tr><td>Löschcodes und eine eventuelle Kontoverknüpfung</td><td>gelöscht</td></tr>
       <tr><td>Online-Partien</td><td>anonymisiert: Die Verknüpfung mit deiner Spieler-ID wird entfernt; übrig bleiben
-        nur anonyme Spieldaten. Partiedaten werden ohnehin nach 89 Tagen gelöscht.</td></tr>
+        nur anonyme Spieldaten. Partiedaten werden ohnehin nach 24 Stunden gelöscht.</td></tr>
       <tr><td>Google-Play-Käufe (Bestellnummer, Prüfwert des Kauf-Tokens, Status, Kaufverlauf)</td><td>anonymisiert
         aufbewahrt, ohne Bezug zu deinem Profil – damit „Kauf wiederherstellen“ und Rückerstattungen weiter
         funktionieren. Eine automatische Löschung ist derzeit nicht eingerichtet.</td></tr>
       <tr><td>Gekürzte IDs in Betriebsprotokollen</td><td>spätestens nach 14 Tagen gelöscht</td></tr>
+      <tr><td>Sicherungskopien des Servers</td><td>gelöschte Daten verschwinden spätestens nach 14 Tagen auch aus den
+        Sicherungskopien</td></tr>
       <tr><td>Einträge im Audit-Protokoll (Verwaltungs- und Kaufereignisse, zum Beispiel ein Geschenk oder eine
         Rückerstattung)</td><td>bleiben erhalten, mit der Spieler-ID, aber ohne Profil und Namen; derzeit keine
         automatische Löschung</td></tr>
