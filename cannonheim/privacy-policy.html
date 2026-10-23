@@ -39,7 +39,7 @@
 <body>
   <main>
     <h1>Datenschutzerklärung für CANNONHEIM</h1>
-    <p class="date">Stand: 18. Oktober 2026 (App-Version 1.0.0, Online-Dienst 1.0.1)</p>
+    <p class="date">Stand: 23. Oktober 2026 (App-Version 1.0.0, Online-Dienst 1.0.1)</p>
 
     <p>CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>) ist ein Strategiespiel: Zwei Burgen beschießen sich
       abwechselnd – gegen den Computer, zu zweit an einem Gerät, im lokalen Netzwerk (LAN) oder online gegen andere
@@ -202,9 +202,10 @@
       Prüfwerte) Verwaltungs- und Kaufereignisse, zum Beispiel Geschenke, Entzug einer Freischaltung, Namensänderungen
       durch den Administrator, Sperren sowie Übertragung und Erstattung von Käufen. Ein Eintrag enthält Zeitpunkt, Art
       der Aktion, die betroffene Spieler-ID und kurze Details (zum Beispiel einen gekürzten Teil der Bestellnummer),
-      aber keine Spielernamen und keine IP-Adressen. Zweck: Nachvollziehbarkeit von Verwaltungsaktionen und Käufen und
-      Schutz vor Missbrauch (Art. 6 Abs. 1 lit. f DSGVO). Das Protokoll wird nicht automatisch gelöscht; die Einträge
-      bleiben auch nach einer Profillöschung erhalten, dann ohne zugehöriges Profil.</p>
+      aber keine IP-Adressen. Ändert der Administrator einen Spielernamen, wird dabei der neue Spielername protokolliert.
+      Zweck: Nachvollziehbarkeit von Verwaltungsaktionen und Käufen und Schutz vor Missbrauch (Art. 6 Abs. 1 lit. f
+      DSGVO). Das Protokoll wird nicht automatisch gelöscht; die Einträge bleiben auch nach einer Profillöschung
+      erhalten, dann ohne zugehöriges Profil, aber gegebenenfalls mit dem dort protokollierten Spielernamen.</p>
 
     <h2>8. LAN-Mehrspieler</h2>
     <p>Im LAN-Mehrspieler verbinden sich zwei Geräte direkt im selben lokalen Netzwerk; unser Server ist nicht beteiligt.
@@ -225,8 +226,9 @@
       <li>Meldungen: bis zur Bearbeitung; bearbeitete Meldungen 90 Tage.</li>
       <li>Beweiskopie einer gemeldeten Partie: höchstens 30 Tage ab Eingang der Meldung, früher nach Abschluss der
         Prüfung; länger nur bei gesondert dokumentierter rechtlicher Notwendigkeit (<a href="#meldungen">Abschnitt 4</a>).</li>
-      <li>Kaufdaten (Abschnitt 5): Sie werden derzeit nicht automatisch gelöscht. Nach einer Profillöschung bleiben sie
-        ohne Bezug zum Profil erhalten, damit „Kauf wiederherstellen“ und Rückerstattungen funktionieren.</li>
+      <li>Kaufdaten (Abschnitt 5): Sie werden derzeit nicht automatisch gelöscht. Bei einer Profillöschung wird nur die
+        Zuordnung zu deinem Profil entfernt; Bestellnummer, Prüfwert des Kauf-Tokens, Produkt, Kaufstatus und Zeitpunkte
+        bleiben erhalten, damit „Kauf wiederherstellen“ und Rückerstattungen funktionieren.</li>
       <li>Audit-Protokoll (Abschnitt 7): wird derzeit nicht automatisch gelöscht.</li>
       <li>Zähler des Online-Kontingents (sobald aktiv): 100 Tage.</li>
       <li>IP-Adressen: nur für die Dauer der Verbindung im Arbeitsspeicher.</li>
@@ -251,10 +253,12 @@
     <p>Wir löschen dein Profil (Name, Spieler-ID, Prüfwert des Zugangsschlüssels, Zeitstempel, Spielstatistik,
       Freischaltungen und Geschenke) bei einem Antrag per E-Mail innerhalb von 30 Tagen und bestätigen dir die Löschung.
       Deine Online-Partien werden dabei anonymisiert: Die Verknüpfung mit deiner Spieler-ID wird entfernt, übrig bleiben
-      nur anonyme Spieldaten (Dauer, Ergebnisgrund). Kaufdaten bleiben ohne Bezug zu deinem Profil erhalten; einen
-      Kauf holst du in einem neuen Profil über „Kauf wiederherstellen“ zurück. Eine geschenkte Vollversion geht mit der
+      nur anonyme Spieldaten (Dauer, Ergebnisgrund). Bei Kaufdaten wird die Zuordnung zu deinem Profil entfernt;
+      Bestellnummer, Prüfwert des Kauf-Tokens, Produkt, Kaufstatus und Zeitpunkte bleiben erhalten. Einen Kauf holst du
+      in einem neuen Profil über „Kauf wiederherstellen“ zurück. Eine geschenkte Vollversion geht mit der
       Löschung verloren. Gekürzte IDs in den Betriebsprotokollen verschwinden spätestens nach 14 Tagen. Einträge im
-      Audit-Protokoll (Abschnitt 7) bleiben mit der Spieler-ID, aber ohne Profil und Namen erhalten. Deine
+      Audit-Protokoll (Abschnitt 7) bleiben mit der Spieler-ID, aber ohne Profil erhalten; hat der Administrator deinen
+      Spielernamen geändert, bleibt der dabei protokollierte neue Name in diesem Eintrag erhalten. Deine
       Online-Sitzungen und deine Meldungen werden gelöscht.</p>
     <p><strong>Ausnahme bei gemeldeten Partien:</strong> Wurde eine Partie, an der du beteiligt warst, gemeldet, und
       läuft dazu noch eine Beweissicherung (<a href="#meldungen">Abschnitt 4</a>), bleibt diese Kopie trotz Löschung
