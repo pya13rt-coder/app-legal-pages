@@ -47,8 +47,11 @@
 
     <h2>1. Kurzfassung</h2>
     <ul>
-      <li>Singleplayer, Hotseat und LAN funktionieren ohne unseren Server. Unser Server erhält nur Daten, wenn du den
-        Online-Mehrspieler oder das Online-Profil nutzt, CANNONHEIM Full kaufst oder einen Kauf wiederherstellst.</li>
+      <li>Singleplayer, Hotseat und LAN funktionieren ohne unseren Server. Ab App-Version 1.1.1 fragt die App beim
+        Start einmal kurz beim Server nach, ob ein Update nötig ist und ob es eine Neuigkeit gibt - ohne Spieler-ID,
+        ohne Namen und ohne Anmeldung (<a href="#startabfrage">Abschnitt 7</a>). Darüber hinaus erhält unser Server nur
+        Daten, wenn du den Online-Mehrspieler oder das Online-Profil nutzt, CANNONHEIM Full kaufst oder einen Kauf
+        wiederherstellst.</li>
       <li>Im <strong>Online-Mehrspieler</strong> speichern wir ein <strong>Gastprofil</strong>: einen von dir gewählten
         <strong>Spielernamen</strong>, eine <strong>zufällig erzeugte Spieler-ID</strong> und die
         <strong>Ergebnisse deiner Online-Partien</strong>. Die App erhebt keine E-Mail-Adresse, keinen echten Namen,
@@ -82,7 +85,9 @@
       <li>falls du den Online-Mehrspieler nutzt: deinen Spielernamen, deine Spieler-ID und einen geheimen
         Zugangsschlüssel (Token), mit dem sich die App beim Online-Dienst anmeldet,</li>
       <li>falls du CANNONHEIM Full besitzt: einen vom Online-Dienst digital signierten Nachweis (Spieler-ID, Besitz,
-        Zeitpunkt), damit die Vollversion auch ohne Internetverbindung freigeschaltet bleibt.</li>
+        Zeitpunkt), damit die Vollversion auch ohne Internetverbindung freigeschaltet bleibt,</li>
+      <li>ab App-Version 1.1.1: die beim Start gemeldete Mindestversion und welche Startnachricht du bereits gesehen
+        hast (<a href="#startabfrage">Abschnitt 7</a>).</li>
     </ul>
     <p>Außer den in den Abschnitten 4 und 5 genannten Daten wird davon nichts übertragen. Die Daten werden gelöscht, wenn
       du die App deinstallierst oder in den Android-Einstellungen die App-Daten löschst.</p>
@@ -191,6 +196,15 @@
     <p>Für den Verbindungsaufbau verarbeitet der Server zwangsläufig deine IP-Adresse. Sie wird nur im Arbeitsspeicher
       genutzt, um Überlastung und Missbrauch zu begrenzen (zum Beispiel höchstens eine bestimmte Zahl von Verbindungen je
       Adresse), und weder in der Datenbank noch in Protokollen gespeichert.</p>
+    <p id="startabfrage"><strong>Startabfrage (ab App-Version 1.1.1):</strong> Hat dein Gerät eine Internetverbindung,
+      ruft die App beim Start einmal <code>https://online.cannonheim.com/start</code> ab (ist diese Adresse nicht
+      erreichbar, die feste Adresse unseres Servers). Die App schickt dabei keine Spieler-ID, keinen Spielernamen und
+      keine Geräte-IDs mit, nur die technisch übliche Anfrage. Der Server antwortet mit der Mindestversion der App und
+      gegebenenfalls einer Startnachricht (zum Beispiel Neuigkeiten zu einem Update). Ist deine App älter als die
+      Mindestversion, bittet sie dich, im Play Store zu aktualisieren. Deine IP-Adresse wird dafür wie bei jeder
+      Verbindung nur im Arbeitsspeicher verarbeitet; die Abfrage wird nicht protokolliert und keinem Profil zugeordnet.
+      Ist der Server nicht erreichbar, startet das Spiel normal. Zweck: ein aktuelles, funktionsfähiges Spiel und
+      Hinweise auf Neuerungen (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO).</p>
     <p>Die Betriebsprotokolle des Servers enthalten Zeitpunkte, Ereignisse (zum Beispiel Anmeldung, Verbindungsende,
       Partieende) und gekürzte Spieler- und Partie-IDs, aber keine Spielernamen und keine IP-Adressen. Sie dienen der
       Fehlersuche und werden nach 14 Tagen gelöscht. Warnungen und Fehlermeldungen landen zusätzlich im Systemprotokoll
@@ -273,7 +287,8 @@
     <h2>11. Berechtigungen</h2>
     <p>CANNONHEIM fordert diese Berechtigungen an:</p>
     <ul>
-      <li><strong>Internetzugriff</strong> – für den Online- und den LAN-Mehrspieler sowie für Käufe.</li>
+      <li><strong>Internetzugriff</strong> – für den Online- und den LAN-Mehrspieler, für Käufe und (ab App-Version
+        1.1.1) für die Startabfrage.</li>
       <li><strong>Google-Play-Abrechnung</strong> (<code>com.android.vending.BILLING</code>) – für den Kauf von CANNONHEIM
         Full.</li>
       <li><strong>Netzwerkstatus abfragen</strong> – wird von der Google-Play-Billing-Bibliothek benötigt.</li>
