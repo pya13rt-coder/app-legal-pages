@@ -66,6 +66,8 @@
       <li>Alle Verbindungen zum Online-Dienst sind verschlüsselt (TLS).</li>
       <li>Keine Werbung, kein Tracking, keine Analyse-Dienste, kein Crash-Reporting, kein Verkauf und keine Weitergabe
         von Daten.</li>
+      <li>Für den Online-Modus gelten die <a href="rules.html">Regeln für den Online-Modus</a>; bei Verstößen kann
+        ein Online-Profil gesperrt werden (<a href="#sperren">Abschnitt 4</a>).</li>
       <li>Du kannst dein Online-Profil jederzeit löschen – in der App oder per E-Mail
         (<a href="#loeschen">Abschnitt 10</a>, <a href="delete-account.html">Profil löschen</a>).</li>
     </ul>
@@ -174,6 +176,13 @@
       Zugriff hat nur der Administrator; jede Einsicht wird protokolliert. Rechtsgrundlage: unser berechtigtes Interesse
       an einem fairen, missbrauchsfreien Online-Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Wird eine Partie erst gemeldet,
       nachdem ihre Daten bereits gelöscht wurden (nach 24 Stunden), bleibt nur die Meldung selbst.</p>
+    <p id="sperren"><strong>Sperren:</strong> Verstößt jemand gegen die <a href="rules.html">Regeln für den
+      Online-Modus</a>, kann der Administrator das Online-Profil befristet oder dauerhaft sperren. Dafür speichern wir am
+      Profil das Ende der Sperre und den Grund. Beides zeigt die App dem Gesperrten an (ab App-Version 1.1.1). Eine
+      Sperre betrifft nur den Online-Modus. Die Angaben bleiben am Profil, bis der Administrator die Sperre aufhebt oder
+      das Profil gelöscht wird; im Audit-Protokoll (Abschnitt 7) bleibt ein Eintrag mit Spieler-ID, Ende und Grund der
+      Sperre. Rechtsgrundlage: unser berechtigtes Interesse an einem fairen, missbrauchsfreien Online-Betrieb
+      (Art. 6 Abs. 1 lit. f DSGVO).</p>
     <p><strong>Sichtbarkeit:</strong> Andere Online-Spieler sehen deinen Spielernamen und ein vierstelliges Kürzel deiner
       Spieler-ID, solange du online bist; dein Gegner sieht deinen Spielernamen während der Partie.</p>
     <p><strong>Rechtsgrundlage:</strong> Bereitstellung der von dir gewünschten Online-Funktion (Art. 6 Abs. 1 lit. b
@@ -250,7 +259,8 @@
       30 Tagen gelöscht.</p>
     <p><strong>Änderungsprotokoll (Audit-Protokoll):</strong> Der Dienst protokolliert manipulationssicher (verkettete
       Prüfwerte) Verwaltungs- und Kaufereignisse, zum Beispiel Geschenke, Entzug einer Freischaltung, Namensänderungen
-      durch den Administrator, Sperren, das Verknüpfen und Lösen einer Google-Sicherung sowie Übertragung und Erstattung
+      durch den Administrator, Sperren (mit Ende und Grund) und deren Aufhebung, das Verknüpfen und Lösen einer
+      Google-Sicherung sowie Übertragung und Erstattung
       von Käufen. Ein Eintrag enthält Zeitpunkt, Art
       der Aktion, die betroffene Spieler-ID und kurze Details (zum Beispiel einen gekürzten Teil der Bestellnummer),
       aber keine IP-Adressen. Ändert der Administrator einen Spielernamen, wird dabei der neue Spielername protokolliert.
@@ -269,6 +279,8 @@
       <li>Online-Profil, Spielstatistik, Freischaltungen und Geschenke: bis du die Löschung verlangst
         (<a href="#loeschen">Abschnitt 10</a>) oder der Online-Dienst eingestellt wird.</li>
       <li>Google-Sicherung (Prüfwert der Google-Kontokennung): bis du die Verknüpfung löst oder dein Profil löschst.</li>
+      <li>Sperre (Ende und Grund): bis zur Aufhebung durch den Administrator oder bis zur Löschung des Profils; der
+        Eintrag im Audit-Protokoll bleibt (siehe unten).</li>
       <li>Partiedaten: 24 Stunden nach Ende der Partie, dann automatisch gelöscht (nur die Summen der Spielstatistik
         bleiben). Eine Partie, deren Ergebnis noch nicht feststeht, bleibt bis zur Auswertung gespeichert, höchstens
         48 Stunden; danach wird sie ohne Wertung abgeschlossen und nach weiteren 24 Stunden gelöscht.</li>
