@@ -119,7 +119,8 @@
         ohne Passwort</td></tr>
       <tr><td>Spielversion, Zeitpunkt der Erstellung und der letzten Anmeldung</td><td>Kompatibilität, Betrieb</td></tr>
       <tr><td>Online-Sitzungen: Beginn und Ende deiner Verbindungen mit dem Online-Dienst und die Spielversion (ohne
-        IP-Adresse)</td><td>Betrieb und Fehlersuche, Erkennen von Missbrauch, Bearbeitung von Meldungen</td></tr>
+        IP-Adresse)</td><td>Betrieb und Fehlersuche, Erkennen von Missbrauch, Bearbeitung von Meldungen, anonyme
+        Nutzungsstatistik (<a href="#statistik">Abschnitt 7</a>)</td></tr>
       <tr><td>Partiedaten: beteiligte Spieler-IDs, Beginn und Ende, Sieger, Dauer, Grund des Partieendes (zum Beispiel
         Sieg, Aufgabe, Verbindungsabbruch), ein Prüfwert des Endstands und die Trefferzahl beider Seiten</td>
         <td>Durchführung der Partie, Bestätigung des Ergebnisses, Erkennen von Fehlern und Manipulation</td></tr>
@@ -263,6 +264,12 @@
     <p>Für den Betrieb zählen wir außerdem nur zusammengefasste Kennzahlen je Minute (zum Beispiel Zahl der gleichzeitig
       verbundenen Spieler, laufende Partien, Fehlerzahlen) - ohne Spieler-IDs, Namen oder IP-Adressen. Sie werden nach
       30 Tagen gelöscht.</p>
+    <p id="statistik"><strong>Nutzungsstatistik:</strong> Für die Planung des Betriebs bilden wir aus diesen Kennzahlen,
+      den Online-Sitzungen, den Profilen und den Partien anonyme Tageswerte, zum Beispiel die Zahl aktiver Spieler, neuer
+      Profile, gespielter und abgebrochener Partien, die durchschnittliche Spieldauer, den Anteil wiederkehrender Spieler
+      und die Höchstzahl gleichzeitig verbundener Spieler. Diese Tageswerte enthalten keine Spieler-IDs, Namen oder
+      IP-Adressen und lassen keinen Rückschluss auf einzelne Spieler zu. Sie werden zwei Jahre aufbewahrt. Rechtsgrundlage:
+      unser berechtigtes Interesse an einem bedarfsgerechten, stabilen Betrieb (Art. 6 Abs. 1 lit. f DSGVO).</p>
     <p><strong>Änderungsprotokoll (Audit-Protokoll):</strong> Der Dienst protokolliert manipulationssicher (verkettete
       Prüfwerte) Verwaltungs- und Kaufereignisse, zum Beispiel Geschenke, Entzug einer Freischaltung, Namensänderungen
       durch den Administrator, Sperren (mit Ende und Grund) und deren Aufhebung, das Verknüpfen und Lösen einer
@@ -304,6 +311,7 @@
       <li>Zähler des Online-Kontingents (sobald aktiv): 100 Tage.</li>
       <li>IP-Adressen: nur für die Dauer der Verbindung im Arbeitsspeicher.</li>
       <li>Betriebsprotokolle: 14 Tage; zusammengefasste Kennzahlen: 30 Tage (Abschnitt 7).</li>
+      <li>Anonyme Tageswerte der Nutzungsstatistik (ohne Personenbezug): 2 Jahre (Abschnitt 7).</li>
       <li>Sicherungskopien des Servers (Schutz vor Datenverlust, gespeichert in Österreich): bis zu 14 Tage. Gelöschte
         Daten verschwinden spätestens dann auch aus den Sicherungskopien.</li>
       <li>E-Mails an den Support (Abschnitt 18): Sie liegen im E-Mail-Postfach; eine automatische Löschfrist ist derzeit
