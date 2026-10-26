@@ -39,7 +39,7 @@
 <body>
   <main>
     <h1>Datenschutzerklärung für CANNONHEIM</h1>
-    <p class="date">Stand: 25. Oktober 2026 (App-Version 1.0.0 und 1.1.1, Online-Dienst 1.1.1)</p>
+    <p class="date">Stand: 26. Oktober 2026 (App-Version 1.0.0, 1.1.1 und 1.1.2, Online-Dienst 1.1.2)</p>
 
     <p>CANNONHEIM (Android-Paket <code>com.cannonheim.game</code>) ist ein Strategiespiel: Zwei Burgen beschießen sich
       abwechselnd – gegen den Computer, zu zweit an einem Gerät, im lokalen Netzwerk (LAN) oder online gegen andere
@@ -48,7 +48,8 @@
     <h2>1. Kurzfassung</h2>
     <ul>
       <li>Singleplayer, Hotseat und LAN funktionieren ohne unseren Server. Ab App-Version 1.1.1 fragt die App beim
-        Start einmal kurz beim Server nach, ob ein Update nötig ist und ob es eine Neuigkeit gibt - ohne Spieler-ID,
+        Start einmal kurz beim Server nach, ob ein Update nötig ist, ob es eine Neuigkeit gibt und (ab App-Version
+        1.1.2) ob eine Wartung läuft oder geplant ist - ohne Spieler-ID,
         ohne Namen und ohne Anmeldung (<a href="#startabfrage">Abschnitt 7</a>). Darüber hinaus erhält unser Server nur
         Daten, wenn du den Online-Mehrspieler oder das Online-Profil nutzt, CANNONHEIM Full kaufst oder einen Kauf
         wiederherstellst.</li>
@@ -56,6 +57,10 @@
         <strong>Spielernamen</strong>, eine <strong>zufällig erzeugte Spieler-ID</strong> und die
         <strong>Ergebnisse deiner Online-Partien</strong>. Die App erhebt keine E-Mail-Adresse, keinen echten Namen,
         keinen Standort, keine Kontakte und keine Geräte- oder Werbe-IDs.</li>
+      <li>Freiwillig kannst du dein Online-Profil <strong>mit Google sichern</strong>, um es nach einer Neuinstallation
+        oder auf einem neuen Gerät zurückzuholen. Wir speichern dafür nur einen <strong>Prüfwert (Hash) der Kennung
+        deines Google-Kontos</strong> – keine E-Mail-Adresse, keinen Namen, kein Bild
+        (<a href="#google-sicherung">Abschnitt 4</a>).</li>
       <li><strong>CANNONHEIM Full</strong> kaufst du über Google Play. Die Zahlung wickelt Google ab; wir erhalten keine
         Zahlungsdaten, sondern nur Angaben zum Kauf (<a href="#kaeufe">Abschnitt 5</a>).</li>
       <li>Alle Verbindungen zum Online-Dienst sind verschlüsselt (TLS).</li>
@@ -82,8 +87,9 @@
       <li>deine Einstellungen, zum Beispiel Schwierigkeit, Ton, Kamerawackeln und bereits gesehene Hinweise,</li>
       <li>kurze Spielprotokolle der letzten Partien und der Grundausbildung (zum Beispiel Karte, Runden, Schüsse, Treffer,
         Spielversion),</li>
-      <li>falls du den Online-Mehrspieler nutzt: deinen Spielernamen, deine Spieler-ID und einen geheimen
-        Zugangsschlüssel (Token), mit dem sich die App beim Online-Dienst anmeldet,</li>
+      <li>falls du den Online-Mehrspieler nutzt: deinen Spielernamen, deine Spieler-ID, einen geheimen
+        Zugangsschlüssel (Token), mit dem sich die App beim Online-Dienst anmeldet, und ob dein Profil mit Google
+        gesichert ist,</li>
       <li>falls du CANNONHEIM Full besitzt: einen vom Online-Dienst digital signierten Nachweis (Spieler-ID, Besitz,
         Zeitpunkt), damit die Vollversion auch ohne Internetverbindung freigeschaltet bleibt,</li>
       <li>ab App-Version 1.1.1: die beim Start gemeldete Mindestversion und welche Startnachricht du bereits gesehen
@@ -95,7 +101,8 @@
     <h2>4. Online-Mehrspieler (freiwillig)</h2>
     <p>Der Online-Mehrspieler ist optional. Beim ersten Öffnen wählst du einen Spielernamen (3–20 Zeichen). Bitte
       verwende dafür nicht deinen echten Namen. Der Online-Dienst legt daraufhin ein Gastprofil an. Es ist an deine
-      Installation gebunden, nicht an ein Google-Konto oder eine E-Mail-Adresse. Spielernamen sind eindeutig; deinen
+      Installation gebunden, nicht an eine E-Mail-Adresse; nur wenn du es ausdrücklich möchtest, sicherst du es mit
+      deinem Google-Konto (<a href="#google-sicherung">siehe unten</a>). Spielernamen sind eindeutig; deinen
       Namen kannst du höchstens alle 30 Tage ändern. Zusammen mit einem vierstelligen Kürzel ergibt er deinen
       Spielercode (<code>Name#ABCD</code>). Hast du schon ein Profil, verbindet sich die App beim Öffnen des
       Multiplayer-Bereichs oder des Profils mit dem Online-Dienst.</p>
@@ -118,6 +125,34 @@
         Profil</td></tr>
       <tr><td>Zeitpunkt der letzten Namensänderung</td><td>Einhalten der 30-Tage-Frist</td></tr>
     </table>
+    <p id="google-sicherung"><strong>Profil mit Google sichern (freiwillig):</strong> Ohne Sicherung lässt sich ein
+      Gastprofil nach dem Löschen der App oder auf einem neuen Gerät nicht wiederherstellen. Deshalb kannst du es im
+      Profil mit „Mit Google sichern“ an dein Google-Konto koppeln. Das ist keine Voraussetzung für das Spiel und
+      lässt sich jederzeit mit „Verknüpfung lösen“ rückgängig machen.</p>
+    <ul>
+      <li><strong>Ablauf:</strong> Die App holt beim Online-Dienst einen Einmalwert und öffnet die Android-Anmeldung
+        „Mit Google anmelden“ (Android Credential Manager). Nach deiner Bestätigung übergibt Google der App ein
+        signiertes Anmelde-Token, das die App an unseren Online-Dienst schickt.</li>
+      <li><strong>Prüfung:</strong> Der Dienst prüft das Token selbst (Signatur mit den öffentlichen Schlüsseln von
+        Google, Aussteller, Empfänger, Ablauf und Einmalwert). Das Token wird dabei nur im Arbeitsspeicher verarbeitet und
+        nicht gespeichert. Daraus übernommen wird nur die von Google vergebene Kontokennung; E-Mail-Adresse, Name und
+        Profilbild, die ein solches Token enthalten kann, werden weder gespeichert noch verwendet.</li>
+      <li><strong>Gespeichert</strong> werden: ein Prüfwert (SHA-256-Hash) der Kennung deines Google-Kontos, deine
+        Spieler-ID, der Zeitpunkt der Verknüpfung und der Kontotyp deines Profils („verknüpft“ statt „Gast“). Das
+        Verknüpfen und Lösen wird im Audit-Protokoll (Abschnitt 7) mit Spieler-ID und Zeitpunkt vermerkt.</li>
+      <li><strong>Wiederherstellen:</strong> Auf einem neuen Gerät oder nach einer Neuinstallation meldest du dich mit
+        „Vorhandenes Profil mit Google wiederherstellen“ an. Der Dienst sucht das Profil zum Prüfwert und gibt der App
+        einen neuen Zugangsschlüssel; der bisherige Schlüssel wird ungültig. Ein fremdes Profil wird nie herausgegeben,
+        und ein bereits mit einem anderen Profil verknüpftes Google-Konto wird nicht überschrieben.</li>
+      <li><strong>Käufe</strong> bleiben davon getrennt: Die Verknüpfung ändert nichts an Käufen; diese hängen weiter am
+        Kauf bei Google Play (Abschnitt 5).</li>
+      <li><strong>Google:</strong> Bei der Anmeldung verarbeitet Google (Google Ireland Limited; dabei können Daten auch
+        an Google LLC in den USA übermittelt werden) deine Kontodaten nach der eigenen Datenschutzerklärung:
+        <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Unser Online-Dienst ruft bei
+        Google nur dessen öffentliche Schlüssel ab und übermittelt dabei keine Daten über dich.</li>
+      <li><strong>Rechtsgrundlage:</strong> Bereitstellung der von dir gewünschten Sicherungsfunktion (Art. 6 Abs. 1
+        lit. b DSGVO).</li>
+    </ul>
     <p>Weitere Online-Funktionen (zum Beispiel Ranglisten, Freunde, Belohnungen, ein monatliches Kontingent an
       Online-Partien) sind technisch vorbereitet, aber derzeit nicht aktiv. Bevor wir sie einschalten, ergänzen wir diese
       Erklärung.</p>
@@ -200,7 +235,8 @@
       ruft die App beim Start einmal <code>https://online.cannonheim.com/start</code> ab (ist diese Adresse nicht
       erreichbar, die feste Adresse unseres Servers). Die App schickt dabei keine Spieler-ID, keinen Spielernamen und
       keine Geräte-IDs mit, nur die technisch übliche Anfrage. Der Server antwortet mit der Mindestversion der App und
-      gegebenenfalls einer Startnachricht (zum Beispiel Neuigkeiten zu einem Update). Ist deine App älter als die
+      gegebenenfalls einer Startnachricht (zum Beispiel Neuigkeiten zu einem Update), ab App-Version 1.1.2 außerdem mit
+      einer laufenden oder geplanten Wartung (Hinweistext, Beginn und Ende). Ist deine App älter als die
       Mindestversion, bittet sie dich, im Play Store zu aktualisieren. Deine IP-Adresse wird dafür wie bei jeder
       Verbindung nur im Arbeitsspeicher verarbeitet; die Abfrage wird nicht protokolliert und keinem Profil zugeordnet.
       Ist der Server nicht erreichbar, startet das Spiel normal. Zweck: ein aktuelles, funktionsfähiges Spiel und
@@ -214,7 +250,8 @@
       30 Tagen gelöscht.</p>
     <p><strong>Änderungsprotokoll (Audit-Protokoll):</strong> Der Dienst protokolliert manipulationssicher (verkettete
       Prüfwerte) Verwaltungs- und Kaufereignisse, zum Beispiel Geschenke, Entzug einer Freischaltung, Namensänderungen
-      durch den Administrator, Sperren sowie Übertragung und Erstattung von Käufen. Ein Eintrag enthält Zeitpunkt, Art
+      durch den Administrator, Sperren, das Verknüpfen und Lösen einer Google-Sicherung sowie Übertragung und Erstattung
+      von Käufen. Ein Eintrag enthält Zeitpunkt, Art
       der Aktion, die betroffene Spieler-ID und kurze Details (zum Beispiel einen gekürzten Teil der Bestellnummer),
       aber keine IP-Adressen. Ändert der Administrator einen Spielernamen, wird dabei der neue Spielername protokolliert.
       Zweck: Nachvollziehbarkeit von Verwaltungsaktionen und Käufen und Schutz vor Missbrauch (Art. 6 Abs. 1 lit. f
@@ -231,6 +268,7 @@
     <ul>
       <li>Online-Profil, Spielstatistik, Freischaltungen und Geschenke: bis du die Löschung verlangst
         (<a href="#loeschen">Abschnitt 10</a>) oder der Online-Dienst eingestellt wird.</li>
+      <li>Google-Sicherung (Prüfwert der Google-Kontokennung): bis du die Verknüpfung löst oder dein Profil löschst.</li>
       <li>Partiedaten: 24 Stunden nach Ende der Partie, dann automatisch gelöscht (nur die Summen der Spielstatistik
         bleiben). Eine Partie, deren Ergebnis noch nicht feststeht, bleibt bis zur Auswertung gespeichert, höchstens
         48 Stunden; danach wird sie ohne Wertung abgeschlossen und nach weiteren 24 Stunden gelöscht.</li>
@@ -265,7 +303,9 @@
         allein reichen nicht, weil sie für andere sichtbar sind.</li>
     </ul>
     <p>Wir löschen dein Profil (Name, Spieler-ID, Prüfwert des Zugangsschlüssels, Zeitstempel, Spielstatistik,
-      Freischaltungen und Geschenke) bei einem Antrag per E-Mail innerhalb von 30 Tagen und bestätigen dir die Löschung.
+      Freischaltungen, Geschenke und eine eventuelle Google-Sicherung) bei einem Antrag per E-Mail innerhalb von 30 Tagen
+      und bestätigen dir die Löschung. Hast du dein Profil mit Google gesichert, kannst du es nach einer Neuinstallation
+      auch wiederherstellen und dann direkt in der App löschen.
       Deine Online-Partien werden dabei anonymisiert: Die Verknüpfung mit deiner Spieler-ID wird entfernt, übrig bleiben
       nur anonyme Spieldaten (Dauer, Ergebnisgrund). Bei Kaufdaten wird die Zuordnung zu deinem Profil entfernt;
       Bestellnummer, Prüfwert des Kauf-Tokens, Produkt, Kaufstatus und Zeitpunkte bleiben erhalten. Einen Kauf holst du
@@ -299,10 +339,10 @@
     <h2>12. Keine Werbung, kein Tracking, keine Weitergabe</h2>
     <p>CANNONHEIM enthält keine Werbung, keine Analyse- oder Tracking-Dienste und kein Crash-Reporting. Eingebunden sind
       nur Bibliotheken von Google: die Google Play Billing Library (Käufe), Google Play In-App Updates (Hinweis auf eine
-      neue Version) und der Android Credential Manager. Letzterer ist für eine spätere Sicherung des Profils mit einem
-      Google-Konto vorgesehen; diese Funktion ist derzeit nicht aktiv. Wir verkaufen keine Daten. Außer an Google im
-      Rahmen von Käufen (Abschnitt 5) und dem Hoster als Auftragsverarbeiter (Abschnitt 4) geben wir keine Daten
-      weiter.</p>
+      neue Version) und der Android Credential Manager mit „Mit Google anmelden“ (freiwillige Sicherung des Profils,
+      <a href="#google-sicherung">Abschnitt 4</a>). Wir verkaufen keine Daten. Außer an Google im Rahmen von Käufen
+      (Abschnitt 5) und der von dir gestarteten Google-Anmeldung (Abschnitt 4) sowie dem Hoster als Auftragsverarbeiter
+      (Abschnitt 4) geben wir keine Daten weiter.</p>
 
     <h2>13. Matchbericht teilen</h2>
     <p>Nach einer Partie kannst du über „Bericht teilen“ eine Zusammenfassung des Spiels als Text in die Zwischenablage
