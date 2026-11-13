@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUMIPLOXA – Online-Daten löschen</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #14262b;
+      background: #f3fbfa;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    h1, h2 { line-height: 1.2; }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 8px;
+    }
+    h2 { margin-top: 32px; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid rgba(128, 128, 128, .35); }
+    a {
+      color: #0b7a78;
+      font-weight: 700;
+    }
+    .date {
+      color: #4d6266;
+      margin-bottom: 32px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6f7f5; background: #0f2226; }
+      a { color: #5fe0d6; }
+      .date { color: #a9c6c8; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>LUMIPLOXA – Online-Daten löschen</h1>
+    <p class="date">Stand: 13. November 2026</p>
+
+    <p>Diese Seite beschreibt, wie du die Online-Daten von LUMIPLOXA (Android-Paket <code>com.dluer.lumiploxa</code>)
+      löschen lässt – in der App oder ohne App per E-Mail. LUMIPLOXA hat keine Benutzerkonten mit E-Mail oder
+      Passwort: Online-Daten entstehen nur, wenn du die freiwilligen Online-Funktionen erlaubst, und hängen an einer
+      zufälligen Kennung deiner Installation. Optional kannst du deinen Spielstand mit deinem Google-Konto sichern
+      (<a href="privacy-policy.html#google-sicherung">Datenschutzerklärung, Abschnitt 5</a>).</p>
+
+    <h2>1. In der App löschen (empfohlen)</h2>
+    <ol>
+      <li>Öffne LUMIPLOXA und tippe im Hauptmenü auf <strong>„Optionen“</strong>.</li>
+      <li>Tippe auf <strong>„Online-Daten löschen“</strong> und zur Bestätigung ein zweites Mal. Du brauchst dafür eine
+        Internetverbindung.</li>
+    </ol>
+    <p>Gelöscht werden sofort: deine Kennung, dein Spitzname und dein Ranglistenstand, eine Verknüpfung mit Google und
+      die Sicherung deines Spielstands auf unserem Server. Die Online-Funktionen sind danach ausgeschaltet; dein
+      Spielstand auf dem Gerät bleibt.</p>
+    <p>Nur die Google-Sicherung entfernen: <strong>Optionen → „Spielstand sichern“ → „Verknüpfung lösen“</strong>
+      (zweimal tippen). Kennung und Rangliste bleiben dann bestehen.</p>
+
+    <h2>2. Ohne App per E-Mail</h2>
+    <p>Schreib an <a href="mailto:py.a13rt@gmail.com?subject=LUMIPLOXA%20Online-Daten%20l%C3%B6schen">py.a13rt@gmail.com</a>
+      mit dem Betreff „LUMIPLOXA Online-Daten löschen“ und nenne deinen <strong>Spitznamen aus der Rangliste</strong>.
+      Wir löschen die zugehörigen Daten innerhalb von 30 Tagen und bestätigen dir das per E-Mail. Hast du keinen
+      Spitznamen gewählt, ist deine zufällige Kennung keiner Person zuzuordnen; du kannst die Daten dann über die App
+      löschen (Abschnitt 1) – auch nach einer Neuinstallation, falls du den Spielstand vorher mit Google gesichert und
+      wiederhergestellt hast.</p>
+
+    <h2>3. Was danach noch bleibt</h2>
+    <ul>
+      <li>Anonyme Tagessummen der Level-Statistik (ohne Bezug zu dir).</li>
+      <li>Tägliche Sicherungskopien der Datenbank: Sie werden nach spätestens 30 Tagen überschrieben und nur für die
+        Wiederherstellung nach einem Ausfall verwendet.</li>
+      <li>Hat der Admin deinen Spitznamen verborgen oder gelöscht, bleibt dieser Eingriff im Protokoll vermerkt.</li>
+    </ul>
+    <p>Mehr dazu in der <a href="privacy-policy.html">Datenschutzerklärung</a>.</p>
+  </main>
+</body>
+</html>

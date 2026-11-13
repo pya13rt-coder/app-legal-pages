@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUMIPLOXA – Datenschutzerklärung</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #14262b;
+      background: #f3fbfa;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 72px;
+    }
+    h1, h2 { line-height: 1.2; }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 8px;
+    }
+    h2 { margin-top: 32px; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid rgba(128, 128, 128, .35); }
+    a {
+      color: #0b7a78;
+      font-weight: 700;
+    }
+    .date {
+      color: #4d6266;
+      margin-bottom: 32px;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e6f7f5; background: #0f2226; }
+      a { color: #5fe0d6; }
+      .date { color: #a9c6c8; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Datenschutzerklärung für LUMIPLOXA</h1>
+    <p class="date">Stand: 13. November 2026 (App-Version 1.0.0)</p>
+
+    <p>LUMIPLOXA (Android-Paket <code>com.dluer.lumiploxa</code>) ist ein Kettenreaktions-Puzzlespiel. Diese Erklärung
+      beschreibt, welche Daten dabei verarbeitet werden.</p>
+
+    <h2>1. Kurzfassung</h2>
+    <ul>
+      <li>LUMIPLOXA funktioniert <strong>vollständig offline</strong>. Ohne deine Zustimmung baut die App keine
+        Verbindung zu unserem Server auf.</li>
+      <li>Nur wenn du die <strong>Online-Funktionen</strong> erlaubst (Rangliste, Neuigkeiten), sendet die App eine
+        zufällige Kennung, dein höchstes geschafftes Level und anonyme Level-Statistik an unseren eigenen Server
+        (<a href="#online">Abschnitt 4</a>).</li>
+      <li>In der <strong>Rangliste</strong> erscheinst du nur, wenn du dir einen Spitznamen gibst – mit Spitzname, Level
+        und Sternen.</li>
+      <li>Freiwillig kannst du deinen <strong>Spielstand mit Google sichern</strong>. Wir speichern dann deinen
+        Spielstand und nur einen <strong>Prüfwert (Hash) der Kennung deines Google-Kontos</strong> – keine
+        E-Mail-Adresse, keinen Namen, kein Bild (<a href="#google-sicherung">Abschnitt 5</a>).</li>
+      <li>Alle Verbindungen sind verschlüsselt (TLS). Keine Werbung, kein Tracking, keine Analyse-Dienste, kein Verkauf
+        und keine Weitergabe von Daten.</li>
+      <li>Du kannst alle Online-Daten jederzeit löschen – in der App oder per E-Mail
+        (<a href="#loeschen">Abschnitt 8</a>, <a href="delete-account.html">Online-Daten löschen</a>).</li>
+    </ul>
+
+    <h2>2. Verantwortlicher und Kontakt</h2>
+    <p>Verantwortlich ist:</p>
+    <p>Dominik Lürzer<br>
+      Ober-Reinbach 23<br>
+      5600 St. Johann im Pongau<br>
+      Österreich<br>
+      E-Mail: <a href="mailto:py.a13rt@gmail.com">py.a13rt@gmail.com</a></p>
+    <p>Über diese E-Mail-Adresse erreichst du uns für alle Fragen zum Datenschutz, für Löschanträge und für Support.</p>
+
+    <h2>3. Speicherung auf deinem Gerät</h2>
+    <p>Im privaten App-Speicher (für andere Apps nicht zugänglich) speichert LUMIPLOXA deinen Spielstand: geschaffte
+      Level, Sterne, Funken, Erfolge, Tagesrätsel und Tagesaufgaben, deine Einstellungen und – falls du die
+      Online-Funktionen nutzt – deine Kennung samt geheimem Zugangsschlüssel, deinen Spitznamen und noch nicht
+      gesendete Level-Statistik. Diese Daten werden gelöscht, wenn du die App deinstallierst oder in den
+      Android-Einstellungen die App-Daten löschst.</p>
+
+    <h2 id="online">4. Online-Funktionen (freiwillig)</h2>
+    <p>Nach drei geschafften Leveln fragt die App einmal, ob sie die Online-Funktionen nutzen darf. Ohne Zustimmung
+      bleibt alles offline. Du kannst sie jederzeit in den Einstellungen ein- oder ausschalten.</p>
+    <table>
+      <tr><th>Daten</th><th>Zweck</th></tr>
+      <tr><td>Zufällige Kennung (ohne Bezug zu deinem Gerät oder deiner Person) und ein Prüfwert (Hash) deines
+        Zugangsschlüssels – der Schlüssel selbst bleibt auf deinem Gerät</td><td>Anmeldung ohne Passwort</td></tr>
+      <tr><td>App-Version, Zeitpunkt der Erstellung, letzter Aktivitätstag, höchstes geschafftes Level</td>
+        <td>Kompatibilität, Betrieb, Statistik „Wo hören Spieler auf?“</td></tr>
+      <tr><td>Anonyme Level-Statistik: je Level zum Beispiel Siege, Niederlagen und ihr Grund, Neustarts, Tipps,
+        Rückgängig, Spielzeit und Versuche bis zum ersten Sieg – nur als Tagessummen aller Spieler gespeichert, ohne
+        Bezug zu deiner Kennung</td><td>Verbesserung der Level (Schwierigkeit, Hürden)</td></tr>
+      <tr><td><strong>Nur wenn du an der Rangliste teilnimmst:</strong> dein Spitzname (3–16 Zeichen), dein Level,
+        deine Sterne und wann du diesen Stand erreicht hast</td><td>Anzeige in der Rangliste „Wer ist am weitesten?“,
+        Erkennen unplausibler Sprünge</td></tr>
+    </table>
+    <p>Bitte verwende als Spitznamen nicht deinen echten Namen. Spitznamen, die gegen gute Sitten verstoßen, können wir
+      löschen oder verbergen; solche Eingriffe werden mit Zeitpunkt, Spitzname und Kennung protokolliert.</p>
+    <p><strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit in den
+      Einstellungen widerrufen kannst.</p>
+
+    <h2 id="google-sicherung">5. Spielstand mit Google sichern (freiwillig)</h2>
+    <p>Ohne Sicherung lässt sich dein Spielstand nach dem Löschen der App oder auf einem neuen Gerät nicht
+      zurückholen. Deshalb kannst du ihn in den Einstellungen unter „Spielstand sichern“ mit deinem Google-Konto
+      verknüpfen. Das ist keine Voraussetzung für das Spiel und lässt sich jederzeit mit „Verknüpfung lösen“
+      rückgängig machen.</p>
+    <ul>
+      <li><strong>Ablauf:</strong> Die App holt bei unserem Server einen Einmalwert und öffnet die Android-Anmeldung
+        „Mit Google anmelden“ (Android Credential Manager). Nach deiner Bestätigung übergibt Google der App ein
+        signiertes Anmelde-Token, das die App an unseren Server schickt.</li>
+      <li><strong>Prüfung:</strong> Der Server prüft das Token selbst (Signatur mit den öffentlichen Schlüsseln von
+        Google, Aussteller, Empfänger, Ablauf und Einmalwert). Das Token wird nur im Arbeitsspeicher verarbeitet und
+        nicht gespeichert. Übernommen wird nur die von Google vergebene Kontokennung; E-Mail-Adresse, Name und
+        Profilbild, die ein solches Token enthalten kann, werden weder gespeichert noch verwendet.</li>
+      <li><strong>Gespeichert</strong> werden: ein Prüfwert (SHA-256-Hash) der Kennung deines Google-Kontos, deine
+        Kennung, der Zeitpunkt der Verknüpfung und dein <strong>Spielstand</strong> (wie in Abschnitt 3, ohne
+        Zugangsschlüssel) mit dem Zeitpunkt der letzten Sicherung. Nach Änderungen sendet die App den Spielstand
+        höchstens einmal pro Minute.</li>
+      <li><strong>Wiederherstellen:</strong> Auf einem neuen Gerät meldest du dich mit „Spielstand wiederherstellen“
+        an. Der Server sucht die Sicherung zum Prüfwert und gibt der App einen neuen Zugangsschlüssel; der bisherige
+        Schlüssel wird ungültig. Ein fremder Spielstand wird nie herausgegeben, und ein bereits mit einem anderen
+        Spielstand verknüpftes Google-Konto wird nicht überschrieben.</li>
+      <li><strong>Google:</strong> Bei der Anmeldung verarbeitet Google (Google Ireland Limited; dabei können Daten auch
+        an Google LLC in den USA übermittelt werden) deine Kontodaten nach der eigenen Datenschutzerklärung:
+        <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</li>
+      <li><strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</li>
+    </ul>
+
+    <h2>6. Technische Verbindungsdaten</h2>
+    <p>Beim Verbindungsaufbau sieht unser Server zwangsläufig deine IP-Adresse. Sie wird nur kurz im Arbeitsspeicher
+      verwendet, um Missbrauch zu bremsen (zu viele Anfragen in kurzer Zeit), und weder gespeichert noch protokolliert.
+      Der Server wird von uns selbst betrieben; es sind keine Drittanbieter (Hosting-Plattformen, Analyse- oder
+      Werbedienste) beteiligt.</p>
+
+    <h2>7. Speicherdauer</h2>
+    <ul>
+      <li>Kennung, Rangliste und Google-Sicherung: bis du sie löschst (<a href="#loeschen">Abschnitt 8</a>).</li>
+      <li>Tagesgenaue Aktivität deiner Kennung: 60 Tage, danach bleibt nur die Zahl aktiver Spieler je Tag.</li>
+      <li>Einmalwerte für die Google-Anmeldung: höchstens 10 Minuten.</li>
+      <li>Anonyme Tagessummen der Level-Statistik enthalten keine personenbezogenen Daten.</li>
+      <li>Tägliche Sicherungskopien der Datenbank (für den Fall eines Ausfalls) werden nach spätestens 30 Tagen
+        überschrieben.</li>
+    </ul>
+
+    <h2 id="loeschen">8. Online-Daten löschen</h2>
+    <p>In der App: <strong>Einstellungen → „Online-Daten löschen“</strong> (zweimal tippen). Damit werden deine Kennung,
+      dein Spitzname, dein Ranglistenstand, eine Google-Verknüpfung und die Sicherung deines Spielstands sofort beim
+      Server gelöscht. Nur die Google-Sicherung entfernst du mit <strong>„Spielstand sichern“ → „Verknüpfung
+      lösen“</strong>. Ohne App: siehe <a href="delete-account.html">Online-Daten löschen</a>.</p>
+
+    <h2>9. Berechtigungen</h2>
+    <p>LUMIPLOXA verlangt nur die Berechtigung <strong>Internet</strong>, und zwar ausschließlich für die freiwilligen
+      Online-Funktionen. Kein Zugriff auf Standort, Kontakte, Kamera, Mikrofon oder Dateien.</p>
+
+    <h2>10. Kinder</h2>
+    <p>LUMIPLOXA erhebt außer einem frei gewählten Spitznamen keine Angaben zur Person. Kinder sollten keinen echten
+      Namen als Spitznamen verwenden.</p>
+
+    <h2>11. Deine Rechte</h2>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und
+      Widerspruch (Art. 15–21 DSGVO) sowie auf Widerruf deiner Einwilligung. Wende dich dafür an
+      <a href="mailto:py.a13rt@gmail.com">py.a13rt@gmail.com</a>. Außerdem kannst du dich bei einer
+      Datenschutz-Aufsichtsbehörde beschweren, in Österreich bei der Datenschutzbehörde (www.dsb.gv.at).</p>
+
+    <h2>12. Google Play</h2>
+    <p>Beim Herunterladen und bei Updates über Google Play verarbeitet Google Daten nach seiner eigenen
+      Datenschutzerklärung. Darauf haben wir keinen Einfluss.</p>
+
+    <h2>13. Änderungen</h2>
+    <p>Wir passen diese Erklärung an, wenn sich LUMIPLOXA oder rechtliche Anforderungen ändern. Die aktuelle Version
+      steht immer auf dieser Seite.</p>
+
+    <h2>14. Kontakt per E-Mail</h2>
+    <p>Wenn du uns an <a href="mailto:py.a13rt@gmail.com">py.a13rt@gmail.com</a> schreibst, verarbeiten wir deine
+      E-Mail-Adresse, den Inhalt deiner Nachricht und die Angaben, die du uns schickst (zum Beispiel deinen
+      Spitznamen), um deine Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b bzw. f DSGVO, bei Datenschutzanfragen Art. 6
+      Abs. 1 lit. c DSGVO). Das Postfach wird bei Gmail (Google) geführt; Google verarbeitet die E-Mails dabei nach
+      seiner Datenschutzerklärung.</p>
+  </main>
+</body>
+</html>
