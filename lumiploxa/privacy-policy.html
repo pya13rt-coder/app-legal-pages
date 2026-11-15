@@ -44,15 +44,16 @@
 <body>
   <main>
     <h1>Datenschutzerklärung für LUMIPLOXA</h1>
-    <p class="date">Stand: 13. November 2026 (App-Version 1.0.0)</p>
+    <p class="date">Stand: 15. November 2026 (App-Version 1.1.0)</p>
 
     <p>LUMIPLOXA (Android-Paket <code>com.lumiploxa.game</code>) ist ein Kettenreaktions-Puzzlespiel. Diese Erklärung
       beschreibt, welche Daten dabei verarbeitet werden.</p>
 
     <h2>1. Kurzfassung</h2>
     <ul>
-      <li>LUMIPLOXA funktioniert <strong>vollständig offline</strong>. Ohne deine Zustimmung baut die App keine
-        Verbindung zu unserem Server auf.</li>
+      <li>LUMIPLOXA funktioniert <strong>vollständig offline</strong>. Ohne deine Zustimmung fragt die App bei unserem
+        Server nur ab, welche neuen Welten freigeschaltet sind – ohne Kennung und ohne Spielerdaten
+        (<a href="#welten">Abschnitt 4</a>).</li>
       <li>Nur wenn du die <strong>Online-Funktionen</strong> erlaubst (Rangliste, Neuigkeiten), sendet die App eine
         zufällige Kennung, dein höchstes geschafftes Level und anonyme Level-Statistik an unseren eigenen Server
         (<a href="#online">Abschnitt 4</a>).</li>
@@ -84,8 +85,14 @@
       Android-Einstellungen die App-Daten löschst.</p>
 
     <h2 id="online">4. Online-Funktionen (freiwillig)</h2>
+    <p id="welten"><strong>Abruf neuer Welten (auch ohne Zustimmung):</strong> Neue Welten werden nach und nach
+      freigeschaltet. Damit du sie auch ohne Online-Funktionen bekommst, fragt die App beim Start unseren Server, welche
+      Welten freigegeben sind, und erhält die Schlüssel zum Öffnen dieser Welten. Dabei sendet die App keine Kennung,
+      keinen Spielstand und keine sonstigen Daten über dich; es fallen nur die technischen Verbindungsdaten aus
+      <a href="#verbindung">Abschnitt 6</a> an. Rechtsgrundlage ist unser berechtigtes Interesse, das Spiel mit den
+      freigegebenen Inhalten bereitzustellen (Art. 6 Abs. 1 lit. f DSGVO).</p>
     <p>Nach drei geschafften Leveln fragt die App einmal, ob sie die Online-Funktionen nutzen darf. Ohne Zustimmung
-      bleibt alles offline. Du kannst sie jederzeit in den Einstellungen ein- oder ausschalten.</p>
+      werden keine der unten genannten Daten übertragen. Du kannst sie jederzeit in den Einstellungen ein- oder ausschalten.</p>
     <table>
       <tr><th>Daten</th><th>Zweck</th></tr>
       <tr><td>Zufällige Kennung (ohne Bezug zu deinem Gerät oder deiner Person) und ein Prüfwert (Hash) deines
@@ -131,7 +138,7 @@
       <li><strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</li>
     </ul>
 
-    <h2>6. Technische Verbindungsdaten</h2>
+    <h2 id="verbindung">6. Technische Verbindungsdaten</h2>
     <p>Beim Verbindungsaufbau sieht unser Server zwangsläufig deine IP-Adresse. Sie wird nur kurz im Arbeitsspeicher
       verwendet, um Missbrauch zu bremsen (zu viele Anfragen in kurzer Zeit), und weder gespeichert noch protokolliert.
       Der Server wird von uns selbst betrieben; es sind keine Drittanbieter (Hosting-Plattformen, Analyse- oder
